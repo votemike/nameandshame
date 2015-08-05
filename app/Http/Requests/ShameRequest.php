@@ -25,7 +25,7 @@ class ShameRequest extends Request
     {
         return [
             'reg' => 'required|alpha_num|max:10',
-            'video_id' => 'required', //@TODO makesure it's a youtube link. make sure it exists. make sure it's embeddable
+            'video_id' => 'required|youtubeembeddable',
             'reason' => 'required|exists:reasons,id',
             'taken_at_date' => 'date|before:tomorrow',
         ];

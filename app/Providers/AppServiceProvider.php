@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\YouTube\YouTube;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Validator::extend('youtubeembeddable', function($attribute, $value, $parameters) {
+            return YouTube::isEmbeddable($value);
+        });
     }
 
     /**

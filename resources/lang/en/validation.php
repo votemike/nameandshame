@@ -74,6 +74,7 @@ return [
     'timezone'             => 'The :attribute must be a valid zone.',
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
+    'youtubeembeddable'    => 'The video does not seem to be embeddable.',
 
     /*
     |--------------------------------------------------------------------------
